@@ -3,7 +3,7 @@ A responsive school website built using HTML, CSS, JavaScript &amp; php featurin
 
 
 
-##used TECHNOLOGIES
+## used TECHNOLOGIES
 - HTML5
 - CSS3
 - JavaScript
