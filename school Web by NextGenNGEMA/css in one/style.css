@@ -1,0 +1,296 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --gold: #FFD700;
+    --darkgold: #DAA520;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: var(--darkgold);
+    overflow-x: hidden;
+}
+
+/* SECTION BACKGROUND */
+.section {
+    background-image: url(/public/oooo.jpg);
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+
+
+/* HERO SECTION CONTENT ONLY */
+.main-body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  padding: 0 20px;
+
+  background: transparent;   
+  color: var(--color-white);
+}
+
+/* HERO TITLE */
+.main-body h1 {
+  font-size: 3.1rem;
+  font-weight: 900;
+  margin-bottom: 18px;
+
+  color: #ffffff;
+
+  /* strong text visibility */
+  text-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.9),
+    0 0 25px rgba(0, 0, 0, 0.8);
+}
+
+/* HERO TEXT */
+.main-body p {
+  font-size: 1.3rem;
+  max-width: 650px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+
+  color: #f9fafb;
+
+  text-shadow:
+    0 3px 10px rgba(0, 0, 0, 0.85);
+}
+
+
+/*======button======*/
+.button {
+  position: relative;
+  padding: 14px 38px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+
+  color: var(--color-white);
+  background: linear-gradient(
+    135deg,
+    var(--color-primary),
+    var(--color-primary-hover)
+  );
+
+  box-shadow:
+    0 0 25px var(--color-login-shadow),
+    0 0 50px rgba(56, 189, 248, 0.35);
+
+  transition: all 0.35s ease;
+  overflow: hidden;
+}
+
+/* GLOW WAVE EFFECT */
+.button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.5),
+    transparent
+  );
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+}
+
+/* HOVER */
+.button:hover::before {
+  transform: translateX(100%);
+}
+
+.button:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow:
+    0 0 35px var(--color-login-shadow),
+    0 0 70px rgba(56, 189, 248, 0.55);
+}
+
+/* CLICK */
+.button:active {
+  transform: scale(0.96);
+  box-shadow:
+    0 0 15px rgba(56, 189, 248, 0.4);
+}
+
+
+/* INTRO SECTION */
+.intro {
+    text-align: center;
+    color: white;
+    padding: 80px 20px;
+}
+
+.intro p {
+    max-width: 850px;
+    margin: 10px auto 40px auto;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    
+}
+
+.imgg {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.imgg img {
+    width: 350px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/* MISSION */
+.mission {
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.miss {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.miss img {
+    width: 350px;
+    border-radius: 15px;
+}
+
+.miss p {
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+/* VISION */
+.ourvision {
+    padding: 70px 8%;
+    color: white;
+    text-align: center;
+}
+
+.visi {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+    flex-wrap: wrap;
+}
+
+.visi img {
+    width: 350px;
+    border-radius: 15px;
+}
+
+.visi p {
+    max-width: 600px;
+    font-size: 1.3rem;
+    line-height: 1.7;
+}
+
+/* CONTACT */
+#contact {
+    text-align: center;
+    color: white;
+    padding: 80px 20px;
+}
+
+#contact ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+}
+
+#contact ul li a {
+    font-size: 45px;
+    color: white;
+}
+
+#contact ul li a:hover {
+    color: #ff0055;
+}
+
+/* RESPONSIVE DESIGN */
+
+/* Mobile + Tablet */
+@media (max-width: 768px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    .main-body {
+        padding-top: 250px;
+    }
+
+    .main-body h1 {
+        font-size: 2rem;
+    }
+
+    .intro p,
+    .mission p,
+    .visi p {
+        font-size: 1.1rem;
+    }
+
+    .imgg img,
+    .miss img,
+    .visi img {
+        width: 90%;
+        height: auto;
+    }
+
+    .miss,
+    .visi {
+        flex-direction: column;
+        gap: 25px;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 450px) {
+
+    .main-body {
+        padding-top: 220px;
+    }
+
+    .main-body h1 {
+        font-size: 1.5rem;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    #contact ul li a {
+        font-size: 32px;
+    }
+}

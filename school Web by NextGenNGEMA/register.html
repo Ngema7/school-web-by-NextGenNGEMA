@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register</title>
+</head>
+<link rel="stylesheet" href="header.css">
+<link rel="stylesheet" href="/css in one/register.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+
+<body>
+
+
+
+
+   <!-- NAVBAR -->
+        <nav class="navbar">
+            <div class="logo">Ngema</div>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="couse.html">Courses</a></li>
+                <li><a href="aboutUs.html">About</a></li>
+                <li><a href="register.html">Regester</a></li>
+                
+            </ul>
+
+            <div class="icons">
+                <button id="themeToggle">🌙</button>
+                <div class="hamburger" id="hamburger">
+                    <i class="fa-solid fa-bars" id="hamburgerIcon"></i>
+                </div>
+            </div>
+        </nav>
+
+        <!-- SIDEBAR -->
+        <div class="sidebar" id="sidebar">
+            <button class="close-btn" id="closeBtn">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <li><a href="index.html">Home</a></li>
+            <li><a href="couse.html">Courses</a></li>
+            <li><a href="aboutUs.html">About</a></li>
+            <li><a href="register.html">Regester now</a></li>
+            <a href="#login" class="login-btn">Login</a>
+        </div>
+
+
+
+
+
+
+
+
+  <!-- Registration Form -->
+  <div class="register" id="admition">
+    <h2>Register Now</h2>
+    <div class="line"></div>
+
+    <form action="database.php" method="POST">
+      <input type="text" name="name" placeholder="Full Name" required>
+      <input type="email" name="email" placeholder="Email Address" required>
+      <input type="tel" name="phone_no" placeholder="Phone Number" required>
+
+      <select name="subject" required>
+        <option value="" disabled selected>Select Course</option>
+        <option value="computer">Computer</option>
+        <option value="plumbing">Plumbing</option>
+        <option value="+2">+2</option>
+        <option value="business">Business</option>
+      </select>
+
+      <button type="submit" class="button">Submit</button>
+    </form>
+  </div>
+  <script src="script.js"></script>
+
+</body>
+
+</html>

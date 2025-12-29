@@ -1,0 +1,223 @@
+:root {
+  --color-primary: #38bdf8;
+  --color-primary-hover: #0ea5e9;
+  --color-dark-bg: #0f172a;
+  --color-dark-bg-end: #020617;
+  --color-text-light: #e5e7eb;
+  --color-white: #ffffff;
+  --color-login-shadow: rgba(56, 189, 248, 0.45);
+}
+/* ================= NAVBAR ================= */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: #0f172a;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  color: #38bdf8;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* NAV LINKS (DESKTOP) */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+.nav-links a {
+  color: #e5e7eb;
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 4px;
+}
+
+/* UNDERLINE HOVER (NAVBAR) */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: #38bdf8;
+  transition: 0.3s;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* ICONS */
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+#themeToggle {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: white;
+}
+
+.hamburger {
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+  display: none;
+}
+
+/* ================= SIDEBAR ================= */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -260px;
+  width: 260px;
+  height: 100%;
+  background: linear-gradient(180deg, #0f172a, #020617);
+  padding: 80px 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  transition: 0.3s ease;
+  z-index: 2000;
+}
+
+.sidebar.show {
+  right: 0;
+}
+
+/* CLOSE BUTTON */
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
+  transition: 0.3s;
+}
+
+.close-btn:hover {
+  color: #38bdf8;
+  transform: rotate(90deg);
+}
+
+/* SIDEBAR LINKS */
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  position: relative;
+  padding-bottom: 4px;
+  width: fit-content;
+}
+
+/* UNDERLINE HOVER (SIDEBAR – SAME AS NAVBAR) */
+.sidebar a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: #38bdf8;
+  transition: 0.3s;
+}
+
+.sidebar a:hover::after {
+  width: 100%;
+}
+
+/* LOGIN BUTTON */
+.login-btn {
+  background: #38bdf8;
+  color: #020617;
+  text-align: center;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: bold;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.login-btn:hover {
+  background: #0ea5e9;
+  box-shadow: 0 6px 18px rgba(56,189,248,0.45);
+}
+
+/* DARK MODE */
+body.dark {
+  background: #020617;
+  color: #e5e7eb;
+}
+
+body.dark .navbar {
+  background: #020617;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+  }
+  .close-btn:hover {
+  transform: rotate(90deg);
+  color: #38bdf8;
+}
+
+/* SIDEBAR LINKS */
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 8px 10px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+/* SIDEBAR HOVER EFFECT */
+.sidebar a:hover {
+  background: rgba(56,189,248,0.15);
+  padding-left: 18px;
+}
+
+.login-btn {
+  background: linear-gradient(90deg, #38bdf8, #0ea5e9);
+  color: #020617; 
+  text-align: center;
+  padding: 14px 24px;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 10px;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.login-btn:hover {
+  background: linear-gradient(90deg, #0ea5e9, #38bdf8);
+  color: #ffffff; 
+  padding: 16px 24px; 
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 12px 25px rgba(56,189,248,0.45);
+}
+
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course</title>
+</head>
+<link rel="stylesheet" href="/css in one/course.css">
+<link rel="stylesheet" href="header.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+
+<body>
+
+     <!-- NAVBAR -->
+        <nav class="navbar">
+            <div class="logo">Ngema</div>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="couse.html">Courses</a></li>
+                <li><a href="aboutUs.html">About</a></li>
+                <li><a href="register.html">Regester</a></li>
+                
+            </ul>
+
+            <div class="icons">
+                <button id="themeToggle">🌙</button>
+                <div class="hamburger" id="hamburger">
+                    <i class="fa-solid fa-bars" id="hamburgerIcon"></i>
+                </div>
+            </div>
+        </nav>
+
+        <!-- SIDEBAR -->
+        <div class="sidebar" id="sidebar">
+            <button class="close-btn" id="closeBtn">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <li><a href="index.html">Home</a></li>
+            <li><a href="couse.html">Courses</a></li>
+            <li><a href="aboutUs.html">About</a></li>
+            <li><a href="register.html">Regester now</a></li>
+            <a href="#login" class="login-btn">Login</a>
+        </div>
+
+
+
+
+
+
+    <div class="slider">
+        <div class="slides">
+            <img src="/public/computer.png" alt="img">
+            <img src="/public/computer.png" alt="img">
+            <img src="/public/computer.png" alt="img">
+            <img src="/public/computer.png" alt="img">
+        </div>
+
+        <!-- Buttons -->
+        <button class="prev" onclick="prevSlide()">&#10094;</button>
+        <button class="next" onclick="nextSlide()">&#10095;</button>
+    </div>
+
+    <!-- Courses Section -->
+    <div id="courses">
+        <h2>Our Courses</h2>
+        <div class="line"></div>
+
+        <div class="course-container">
+
+            <div class="course-card">
+                <img src="/public/computer.png" alt="img">
+                <h3>Computer</h3>
+                <p>Explore the world of technology through our computer course.</p>
+            </div>
+
+            <div class="course-card">
+                <img src="/public/plum.png" alt="img">
+                <h3>Plumbing</h3>
+                <p>Build practical skills in modern plumbing techniques.</p>
+            </div>
+
+            <div class="course-card">
+                <img src="/public/mmm.png" alt="img">
+                <h3>+2</h3>
+                <p>Study management, education or humanities in +2.</p>
+            </div>
+
+            <div class="course-card">
+                <img src="/public/beau.png" alt="img">
+                <h3>Business</h3>
+                <p>Learn basic business skills required in modern market.</p>
+            </div>
+
+
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,129 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --gold: #FFD700;
+    --main-color: #DAA520;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--main-color);
+    overflow-x: hidden;
+}
+
+
+/* HEADER */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 18px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 30px;
+    color: var(--gold);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* NAVIGATION */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 20px;
+    color: var(--gold);
+      gap : 20px;
+    font-weight: 600;
+}
+
+.nav-links a:hover {
+    color: white;
+}
+
+.hideOnMobile {
+    display: block;
+}
+
+
+/* SIDEBAR */
+#sidebar {
+    position: fixed;
+    right: -260px;
+    top: 0;
+    height: 100%;
+    width: 260px;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    transition: 0.4s ease;
+}
+
+#sidebar.show {
+    right: 0;
+}
+
+#sidebar a {
+    color: white;
+    font-size: 22px;
+}
+
+.menu-button {
+    display: none;
+    font-size: 32px;
+    color: var(--gold);
+    cursor: pointer;
+    margin-left: 200px;
+}
+
+
+
+
+/* About */
+#about {
+    text-align: center;
+    padding: 100px;
+}
+
+#about img {
+    width: 300px;
+    border-radius: 20px;
+    margin-top: 40px;
+}
+#about p {
+    max-width: 600px;
+    margin: 20px auto 0 auto;
+    line-height: 1.6;
+    font-size: 1.2rem;
+}
+
+/* Mobile + Tablet */
+@media (max-width: 768px) {
+
+  
+    .nav-links {
+        display: none;
+    }
+
+    .menu-button {
+        display: block;  
+    }
+}
